@@ -1,5 +1,7 @@
 module.exports = {
-  // Since `gatsby-plugin-typescript` is automatically included in Gatsby you
-  // don't need to define it here (just if you need to change the options)
-  plugins: [],
+  plugins: [
+    'gatsby-plugin-typescript-checker',
+    'gatsby-plugin-emotion',
+    'gatsby-plugin-react-helmet',
+  ],
 };

@@ -7,6 +7,7 @@ module.exports = {
         dark: { raw: '(prefers-color-scheme: dark)' },
       },
       colors: {
+        light: 'rgba(0, 0, 0, 0.4)',
         deepSea: {
           50: '#F4F4F5',
           100: '#E8E9EB',

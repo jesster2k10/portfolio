@@ -14,14 +14,15 @@ interface HeaderProps {
 const Header = ({ className }: HeaderProps) => {
   const { headerLinks } = useSite();
   return (
-    <header tw="flex flex-row mb-4" className={className}>
-      <nav>
-        <ul tw="flex flex-row">
-          {headerLinks.map((link) => (
-            <HeaderLink key={link.href} title={link.title} href={link.href} />
-          ))}
-        </ul>
-      </nav>
+    <header
+      tw="flex flex-wrap justify-center w-full flex-row mb-4"
+      className={className}
+    >
+      <ul tw="flex flex-wrap justify-center w-full flex-row flex-row">
+        {headerLinks.map((link) => (
+          <HeaderLink key={link.href} title={link.title} href={link.href} />
+        ))}
+      </ul>
     </header>
   );
 };

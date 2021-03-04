@@ -91,7 +91,7 @@ const Terminal = ({
     <>
       <Draggable handle="[data-handle]">
         <div
-          tw="flex flex-col w-full mx-3 md:mx-0 md:w-4/5 lg:w-8/12 xl:w-7/12 shadow-lg"
+          tw="flex flex-col w-full mx-3 md:mx-0 max-w-xl shadow-lg"
           className={className}
         >
           <div data-handle>

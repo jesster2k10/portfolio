@@ -13,6 +13,10 @@ module.exports = {
       href: '/experiences',
     },
     {
+      title: 'education',
+      href: '/education',
+    },
+    {
       title: 'skills',
       href: '/skills',
     },

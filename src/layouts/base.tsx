@@ -9,10 +9,13 @@ interface BaseLayoutProps {
 }
 
 const BaseLayout = ({ children }: BaseLayoutProps) => (
-  <div tw="flex flex-col justify-center items-center bg-deepSea-700 text-white min-h-screen">
+  <div
+    tw="flex flex-col justify-center items-center bg-deepSea-700 text-white min-h-screen"
+    css={{ maxWidth: '100vw' }}
+  >
     <Header />
     <main
-      tw="flex flex-col justify-center items-center"
+      tw="flex flex-col justify-center items-center max-w-xl w-full"
       css={{ minHeight: '65vh' }}
     >
       {children}
@@ -21,7 +24,7 @@ const BaseLayout = ({ children }: BaseLayoutProps) => (
     <Global
       styles={css`
         .active-link {
-          ${tw`underline font-bold`}
+          ${tw`font-bold underline`}
         }
       `}
     />

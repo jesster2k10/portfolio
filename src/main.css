@@ -1,0 +1,10 @@
+html,
+body,
+#__gatsby {
+  background-color: #101422; /* bg-deepSea-700 */
+  width: 100%;
+}
+
+#__gatsby {
+  overflow-x: hidden;
+}

@@ -1,5 +1,5 @@
-const siteMetadata = require('./config/site-metadata');
 const path = require('path');
+const siteMetadata = require('./config/site-metadata');
 
 module.exports = {
   siteMetadata,
@@ -24,9 +24,16 @@ module.exports = {
         name: 'posts',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: path.join(__dirname, 'static/education'),
+        name: 'education',
+      },
+    },
     'gatsby-plugin-typescript-checker',
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
-    `gatsby-plugin-layout`,
+    'gatsby-plugin-layout',
   ],
 };

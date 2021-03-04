@@ -20,13 +20,6 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: path.join(__dirname, 'static/posts'),
-        name: 'posts',
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
         path: path.join(__dirname, 'static/education'),
         name: 'education',
       },

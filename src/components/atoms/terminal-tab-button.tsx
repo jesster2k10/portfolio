@@ -12,9 +12,14 @@ type TerminalTabButtonType = 'close' | 'expand' | 'minimize';
 interface TerminalTabButtonProps {
   className?: string;
   type: TerminalTabButtonType;
+  onClick?: () => void;
 }
 
-const TerminalTabButton = ({ className, type }: TerminalTabButtonProps) => {
+const TerminalTabButton = ({
+  className,
+  type,
+  onClick,
+}: TerminalTabButtonProps) => {
   const colorMap: Record<TerminalTabButtonType, string> = {
     close: colors.red[600],
     expand: 'rgb(53, 205, 75)',
@@ -30,6 +35,7 @@ const TerminalTabButton = ({ className, type }: TerminalTabButtonProps) => {
       tw="rounded-full focus:outline-none hover:opacity-75 transition-all ease-in-out duration-100"
       css={{ backgroundColor: color, height: size, width: size }}
       className={className}
+      onClick={onClick}
     />
   );
 };

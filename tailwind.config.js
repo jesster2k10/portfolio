@@ -6,6 +6,10 @@ module.exports = {
         light: { raw: '(prefers-color-scheme: light)' },
         dark: { raw: '(prefers-color-scheme: dark)' },
       },
+      fontFamily: {
+        code:
+          'JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+      },
       colors: {
         light: 'rgba(0, 0, 0, 0.4)',
         deepSea: {

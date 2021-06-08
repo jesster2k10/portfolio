@@ -41,7 +41,7 @@ const HelpOutput = ({ className }: HelpOutputProps) => {
   ];
 
   return (
-    <div tw="flex flex-col" className={className}>
+    <div tw="flex flex-col font-code text-xs" className={className}>
       <Title>Commands:</Title>
       <ul tw="mt-2">
         {commands.map((command) => (
@@ -66,7 +66,7 @@ const HelpOutput = ({ className }: HelpOutputProps) => {
   );
 };
 
-const Title = tw.div`font-bold uppercase`;
+const Title = tw.div`font-bold text-xs font-code uppercase`;
 
 HelpOutput.defaultProps = {
   className: null,

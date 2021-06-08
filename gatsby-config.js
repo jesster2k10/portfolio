@@ -24,6 +24,13 @@ module.exports = {
         name: 'education',
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: ['JetBrains Mono'],
+        display: 'swap',
+      },
+    },
     'gatsby-plugin-typescript-checker',
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',

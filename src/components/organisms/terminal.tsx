@@ -39,6 +39,9 @@ interface TerminalProps {
   initialPrompt?: string;
   animateMessage?: boolean;
   commands?: TerminalCommand[];
+  onClose?: () => void;
+  onMinimize?: () => void;
+  onExpand?: () => void;
 }
 
 const Terminal = ({
@@ -48,11 +51,15 @@ const Terminal = ({
   animateMessage,
   initialPrompt,
   commands = [],
+  onClose,
+  onMinimize,
+  onExpand,
 }: TerminalProps) => {
   const theme: TerminalTheme = {
     ...ReactThemes.magpie,
     background: colors.nightSky[500],
     height: '65vh',
+    fontFamily: 'JetBrains Mono',
   };
   const [doneTyping, setDoneTyping] = useState(
     !(animateMessage && initialMessage),
@@ -95,7 +102,13 @@ const Terminal = ({
           className={className}
         >
           <div data-handle>
-            <TerminalTabs title="jesseonolememen.sh" tw="cursor-move" />
+            <TerminalTabs
+              onExpand={onExpand}
+              onClose={onClose}
+              onMinimize={onMinimize}
+              title="jesseonolememen.sh"
+              tw="cursor-move"
+            />
           </div>
           <div tw="flex flex-col px-2 pt-2 bg-nightSky-500 rounded-b-sm">
             {initialMessage && animateMessage && (
@@ -107,7 +120,7 @@ const Terminal = ({
               />
             )}
             <div
-              tw="transition-all ease-in-out duration-300"
+              tw="transition-all ease-in-out duration-300 font-code"
               css={{ opacity: doneTyping ? 100 : 0 }}
             >
               <ReactTerminal

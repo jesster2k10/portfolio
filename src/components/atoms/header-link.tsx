@@ -13,7 +13,7 @@ interface HeaderLinkProps {
 }
 
 const HeaderLink = ({ className, title, href }: HeaderLinkProps) => (
-  <li tw="mr-4 text-xs font-mono" className={className}>
+  <li tw="mr-4 text-xs font-code" className={className}>
     <Link to={href} activeClassName="active-link">
       {title}
     </Link>

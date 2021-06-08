@@ -16,7 +16,7 @@ const BaseLayout = ({ children }: BaseLayoutProps) => (
     <Header />
     <main
       tw="flex flex-col justify-center items-center max-w-xl w-full"
-      css={{ minHeight: '65vh' }}
+      css={{ minHeight: 550 }}
     >
       {children}
     </main>

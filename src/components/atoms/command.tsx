@@ -12,7 +12,7 @@ interface CommandProps {
 }
 
 const Command = ({ className, title, description }: CommandProps) => (
-  <div tw="flex flex-row" className={className}>
+  <div tw="flex flex-row font-code text-xs" className={className}>
     <span tw="w-3/12 font-bold">{title}</span>
     <span tw="w-9/12">→ {description}</span>
   </div>

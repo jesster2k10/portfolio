@@ -10,7 +10,7 @@ import {
   FaLinkedin,
   FaEnvelope,
 } from 'react-icons/fa';
-import { graphql, Link, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import styled from '@emotion/styled';
 import resumeLink from '../../downloads/resume-jesse-onolememen.pdf';
 
@@ -45,15 +45,19 @@ const Footer = ({ className }: FooterProps) => {
   return (
     <footer tw="flex flex-col" className={className}>
       <Nav tw="space-x-3 flex justify-center items-center">
-        <Link to={socials.stackOverflow}>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={socials.stackOverflow}
+        >
           <FaStackOverflow />
-        </Link>
-        <Link to={socials.github}>
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href={socials.github}>
           <FaGithub />
-        </Link>
-        <Link to={socials.linkedIn}>
+        </a>
+        <a target="_blank" rel="noopener noreferrer" href={socials.linkedIn}>
           <FaLinkedin />
-        </Link>
+        </a>
         <a href={emailLink}>
           <FaEnvelope />
         </a>
@@ -66,6 +70,13 @@ const Footer = ({ className }: FooterProps) => {
           <span role="img" aria-label="Wave">
             👋
           </span>
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/jesster2k10/portfolio"
+        >
+          View the source code/repo for this site
         </a>
       </ExtraContent>
     </footer>

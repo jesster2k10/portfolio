@@ -15,7 +15,7 @@ const renderLink = (title: string, href: string) => (
 );
 
 const SiteInfoPage = () => (
-  <div tw="max-w-lg leading-relaxed text-center">
+  <div tw="max-w-lg font-code text-sm leading-relaxed text-center">
     <p tw="font-medium mb-2">
       This site was built{' '}
       <span role="img" aria-label="heart">

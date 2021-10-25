@@ -22,10 +22,14 @@ const TerminalOutput = ({
   content: { output, outputComponent: OutputComponent },
 }: TerminalOutputProps) => {
   if (OutputComponent) {
-    return <OutputComponent output={output} />;
+    return (
+      <div tw="text-sm font-code">
+        <OutputComponent output={output} />
+      </div>
+    );
   }
 
-  return output;
+  return <div tw="text-xs">{output}</div>;
 };
 
 export const createOutputRecord = (content: TerminalOutputContent) =>

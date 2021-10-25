@@ -25,7 +25,7 @@ const EducationPage = ({ data: { allMdx } }: EducationPageProps) => {
   const [viewRawData, setViewRawData] = useState(false);
 
   return (
-    <div tw="w-full flex flex-col">
+    <div tw="w-full font-code flex text-sm flex-col">
       <button
         type="button"
         tw="ml-auto self-end uppercase text-xs font-bold mb-12"
@@ -36,16 +36,18 @@ const EducationPage = ({ data: { allMdx } }: EducationPageProps) => {
       {viewRawData ? (
         <pre>{JSON.stringify(nodes, null, 2)}</pre>
       ) : (
-        nodes.map((node) => (
-          <EducationItem
-            key={node.id}
-            schoolName={node.frontmatter.school}
-            startingDate={node.frontmatter.start_date}
-            endingDate={node.frontmatter.end_date}
-            degreeName={node.frontmatter.degree}
-            educationType={node.frontmatter.edu_type}
-          />
-        ))
+        nodes
+          .reverse()
+          .map((node) => (
+            <EducationItem
+              key={node.id}
+              schoolName={node.frontmatter.school}
+              startingDate={node.frontmatter.start_date}
+              endingDate={node.frontmatter.end_date}
+              degreeName={node.frontmatter.degree}
+              educationType={node.frontmatter.edu_type}
+            />
+          ))
       )}
     </div>
   );

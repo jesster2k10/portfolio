@@ -34,9 +34,8 @@ const HelpOutput = ({ className }: HelpOutputProps) => {
       description: 'Learn about how this site was built.',
     },
     {
-      title: 'exit',
-      description:
-        'Quit the interactive terminal and get straight to the good stuff.',
+      title: 'clear',
+      description: 'Clear out the terminal',
     },
   ];
 
@@ -56,10 +55,7 @@ const HelpOutput = ({ className }: HelpOutputProps) => {
       <section tw="flex flex-col">
         <Title>Notes:</Title>
         <ul tw="list-disc mt-2">
-          <li>
-            You can close this window at any time or type <strong>exit</strong>{' '}
-            to view the main site.
-          </li>
+          <li>You can close this window at any time.</li>
         </ul>
       </section>
     </div>

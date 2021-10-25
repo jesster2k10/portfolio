@@ -1,9 +1,10 @@
 import React from 'react';
+import 'twin.macro';
 
 const Work = () => (
-  <>
-    <h1>Work</h1>
-  </>
+  <div tw="font-code">
+    <h1>WiP</h1>
+  </div>
 );
 
 export default Work;

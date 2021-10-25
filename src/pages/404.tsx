@@ -1,10 +1,11 @@
 import React from 'react';
 import { PageProps } from 'gatsby';
+import 'twin.macro';
 
 const NotFound: React.FC<PageProps> = () => (
-  <main>
-    <p>Sorry, page not found!</p>
-  </main>
+  <div tw="font-code">
+    <h1>:/ Page not found</h1>
+  </div>
 );
 
 export default NotFound;

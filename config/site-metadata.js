@@ -17,10 +17,6 @@ module.exports = {
       href: '/education',
     },
     {
-      title: 'skills',
-      href: '/skills',
-    },
-    {
       title: 'about',
       href: '/about',
     },

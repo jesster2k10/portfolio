@@ -142,6 +142,11 @@ const Terminal = ({
           .terminalOutput > div {
             ${tw`mb-2`}
           }
+
+          .terminalInput input {
+            ${tw`pl-1 outline-none`}
+            background: none;
+          }
         `}
       />
     </>
